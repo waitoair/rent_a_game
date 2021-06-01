@@ -1,3 +1,11 @@
-  <div class="container">
-    <h1>New Game</h1>
-  </div>
+<div class="container">
+  <h1>New Game</h1>
+  <%= simple_form_for @game do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :category %>
+  <%= f.input :price %>
+  <%= f.check_box :world %>
+  <%= f.submit %>
+  <% end %>
+</div>
