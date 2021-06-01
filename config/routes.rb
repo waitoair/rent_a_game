@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
   root to: 'games#index'
+  devise_for :users
   resources :games do
     resources :users, except: [:index, :show]
   end
