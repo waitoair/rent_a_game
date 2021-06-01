@@ -1,0 +1,10 @@
+<h1>Edit Games</h1>
+<%= simple_form_for @game do |f| %>
+<%= f.input :description %>
+<%= f.input :price %>
+<%= f.submit %>
+<% end %>
+ <%= link_to "Remove",
+                  game_path(@game),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
