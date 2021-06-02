@@ -1,7 +1,7 @@
+games_scss
 <div class="banner">
   <h1>ONLY OLD GAMES</h1>
 </div>
-
 
 <%# <h1>All Games</h1> %>
 <%= current_user.email if current_user %>
@@ -18,3 +18,20 @@
 <%#= link_to "Sign in", new_user_session_path %>
 <%#= link_to "Log Out", destroy_user_session_path, method: 'delete' %>
 <%#= link_to "Edit User", edit_user_registration_path %>
+
+<div class="container">
+  <h1>All Games</h1>
+  <%= current_user.email if current_user %>
+  <% @games.each do |game| %>
+  <li><%= link_to game.name, game_path(game) %></li>
+  <% end %>
+
+  <% if current_user %>
+  <%= link_to "Log Out", destroy_user_session_path, method: 'delete' %>
+  <%= link_to "Edit User", edit_user_registration_path %>
+  <% else %>
+  <%= link_to "Sign in", new_user_session_path %>
+  <%= link_to "Sign Up", new_user_registration_path %>
+  <% end %>
+</div>
+master
