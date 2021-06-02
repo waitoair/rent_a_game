@@ -1,12 +1,20 @@
-<div class="container">
-<h1>All Games</h1>
-<%= current_user.email if current_user %>
-<% @games.each do |game| %>
-<li><%= link_to game.name, game_path(game) %></li>
-<% end %>
-
-
-<%= link_to "Sign in", new_user_session_path %>
+<div class="banner">
+  <h1>ONLY OLD GAMES</h1>
 </div>
-<%= link_to "Log Out", destroy_user_session_path, method: 'delete' %>
-<%= link_to "Edit User", edit_user_registration_path %>
+
+
+<%# <h1>All Games</h1> %>
+<%= current_user.email if current_user %>
+<div class="container">
+  <div class="games">
+    <% @games.each do |game| %>
+    <a href="<%=game_path(game)%>"><%= game.name %></a>
+    <%#= link_to game.name, game_path(game), class:"decoration" %>
+    <% end %>
+  </div>
+</div>
+
+
+<%#= link_to "Sign in", new_user_session_path %>
+<%#= link_to "Log Out", destroy_user_session_path, method: 'delete' %>
+<%#= link_to "Edit User", edit_user_registration_path %>
