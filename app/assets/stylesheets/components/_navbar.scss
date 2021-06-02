@@ -1,12 +1,24 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: rgb(68, 68, 68);
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
+// .navbar-lewagon .navbar-collapse {
+//   flex-grow: 0;
+// }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+// .navbar-lewagon .navbar-brand img {
+//   width: 40px;
+// }
+
+.navbar-lewagon p{
+  font-family: 'Noto Sans JP', sans-serif;
+  color: rgb(255, 255, 255);
+  opacity: 0.8;
+  margin-top: 5px;
+  }
+
+.form-inline .form-control {
+  width: 500px;
 }

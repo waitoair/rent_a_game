@@ -1,0 +1,45 @@
+.show_games h1{
+  font-family: 'Limelight', cursive;
+  margin-top: 20px;
+}
+
+.show_games h2{
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+.show_games p{
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 15px;
+  text-align: justify;
+  text-justify: inter-word;
+  padding-top: 10px;
+}
+
+// .banner_show #myVideo {
+//   position: fixed;
+//   right: 0;
+//   bottom: 0;
+//   min-width: 100%;
+//   min-height: 100%;
+// }
+
+.banner_show {
+  background-image: url('https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80');
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  border-radius: 5px;
+}
+
+.show_button{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.price{
+  
+}
