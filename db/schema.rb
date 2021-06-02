@@ -28,12 +28,12 @@ ActiveRecord::Schema.define(version: 2021_06_01_193142) do
   end
 
   create_table "games", force: :cascade do |t|
-    t.string "name", default: "", null: false
-    t.text "description", default: "", null: false
-    t.decimal "price", default: "0.0", null: false
-    t.string "category", default: "", null: false
-    t.boolean "world", default: false, null: false
-    t.boolean "available", default: true, null: false
+    t.string "name"
+    t.text "description"
+    t.float "price"
+    t.string "category"
+    t.boolean "world"
+    t.boolean "available"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -43,11 +43,9 @@ ActiveRecord::Schema.define(version: 2021_06_01_193142) do
   create_table "rents", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "game_id", null: false
-    t.boolean "rent_world", default: false, null: false
-    t.boolean "rent_game", default: false, null: false
-    t.date "return_date", default: -> { "CURRENT_TIMESTAMP" }, null: false
-    t.decimal "total_price", default: "0.0", null: false
-    t.integer "total_days", default: 0, null: false
+    t.boolean "rent_world"
+    t.boolean "rent_game"
+    t.date "return_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["game_id"], name: "index_rents_on_game_id"
@@ -57,8 +55,8 @@ ActiveRecord::Schema.define(version: 2021_06_01_193142) do
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
-    t.string "phone_number", default: "", null: false
-    t.string "name", default: "", null: false
+    t.string "phone_number"
+    t.string "name"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
