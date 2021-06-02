@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Rent View</h1>
+  <%= simple_form_for [@rent] do |f| %>
+  <%= f.input :rent_world %>
+  <%= f.input :rent_game %>
+  <%= f.input :return_date %>
+  <%= f.submit "submit rent", class: "btn btn-primary" %>
+  <% end %>
+</div>
