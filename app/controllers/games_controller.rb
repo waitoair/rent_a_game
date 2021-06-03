@@ -7,6 +7,7 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
+    @game.update(available: true) if @game.rents.where('return_date > ?', Date.today).empty?
   end
 
   def new
