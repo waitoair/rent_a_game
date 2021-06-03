@@ -7,6 +7,7 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
+    @game.update(available: true) if @game.rents.where('return_date > ?', Date.today).empty?
   end
 
   def new
@@ -21,10 +22,12 @@ class GamesController < ApplicationController
 
   def edit
     @game = Game.find(params[:id])
+    redirect_to @game unless current_user == @game.user
   end
 
   def update
     @game = Game.find(params[:id])
+    redirect_to @game unless current_user == @game.user
     @game.update(game_params)
     redirect_to game_path(@game)
   end

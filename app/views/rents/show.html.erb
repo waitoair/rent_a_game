@@ -2,5 +2,6 @@
 <p> With world: <%= @rent.rent_world ? 'Yes' : 'No' %> </p>
 <p> With game: <%= @rent.rent_game ? 'Yes' : 'No' %> </p>
 <p>Return date: <%= @rent.return_date.strftime("%d/%m/%Y") %> </p>
+<p>Total price:<%= @rent.total_price %>(<%= pluralize(@rent.total_days, 'day') %> ) </p>
 <%= link_to  "Back to Homepage", root_path, class:"btn btn-outline-success" %>
 <%= link_to  "Edit Rent", edit_rent_path(@rent), class:"btn btn-outline-success" %>

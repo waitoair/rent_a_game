@@ -12,9 +12,9 @@
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
   </div>
 
-  <div class="col-12">
-    <%= f.button :submit, "Log in" %>
+  <div class="">
+    <%= f.button :submit, "Log in", class:"btn btn-outline-success mb-3" %>
   </div>
 <% end %>
-
+<p>If you don't have an account</p>
 <%= render "devise/shared/links" %>

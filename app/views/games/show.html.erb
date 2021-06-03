@@ -1,9 +1,6 @@
-
-<div class="banner-show">
-  <video width="1100px" height="350px" loop autoplay muted>
+<video width="1100px" height="350px" loop autoplay muted>
     <source type="video/mp4" src="<%= cl_video_path @game.video.key%>">
-  </video>
-</div>
+ </video>
 
 <div class="container">
   <div class="show_games">
@@ -11,11 +8,14 @@
     <h2><%= @game.category %></h2>
     <p><%= @game.description %></p>
     <p class="price">Price: <%= @game.price %></p>
+    <p> <%= @game.available ? "available" : "unavailable until #{@game.rents.order(:return_date).last.return_date.strftime("%d-%m-%Y")}"  %></p>
   </div>
 </div>
 
 <div class="show_button">
   <%= link_to  "Back to Homepage", root_path, class:"btn btn-outline-success" %>
-  <%= link_to "Edit Game", edit_game_path(@game), class:"btn btn-outline-success" %>
-  <%= link_to "Rent a Game", new_game_rent_path(@game), class:"btn btn-outline-success" %>
+  <% if current_user == @game.user %>
+    <%= link_to "Edit Game", edit_game_path(@game), class:"btn btn-outline-success" %>
+  <% end %>
+  <%= link_to "Rent a Game", new_game_rent_path(@game), class:"btn btn-outline-success" if @game.available %>
 </div>
