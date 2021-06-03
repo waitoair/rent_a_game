@@ -1,43 +1,36 @@
-.banner {
-  background-image: url('https://images.unsplash.com/10/wii.jpg?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
-  background-size: cover;
-  background-position: center;
-  padding: 150px 0;
-  border-radius: 5px;
-}
+// .banner {
+//   background-size:cover;
+//   background-position: center;
+// }
 
-.banner h1 {
-  margin: 0;
-  color: rgb(255, 255, 255);
-  opacity: 0.7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 60px;
-  font-family: 'Limelight', cursive;
-  text-align: center;
+
+ .games{
+   margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
   }
 
-.container .games{
-  display: flex;
-  justify-content: space-between;
-  font-family: 'Noto Sans JP', sans-serif;
-}
+  .game-info {
+    width: 130px;
+  }
 
-.games a{
-  // background-color: rgb(68, 68, 68);
-  // opacity: 0.6;
-  border-radius: 2px;
-  box-shadow:2px 2px 2px ;
-  padding: 10px;
-  margin: 10px;
-  margin-top: 20px;
-  text-decoration:none; 
-   color:#818181;
-   border: 1px solid#818181;
-}
+ .games .photo-game{
+  margin: 20px;
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+ }
 
 .games a:hover{
   color:#24C67E;
   border: 1px solid #24C67E;
+  border-radius: 5px;
 }
 
 .decoration{
