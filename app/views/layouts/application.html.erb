@@ -18,8 +18,12 @@
     <%= render "shared_games/navbar" %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <div class="container">
+    <div class="container game-body">
       <%= yield %>
+    </div>
+
+    <div>
+    <%= render "shared_games/footer" %>
     </div>
   </body>
 </html>
