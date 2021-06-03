@@ -12,12 +12,17 @@ class RentsController < ApplicationController
     @rent = Rent.new(rent_params)
     @rent.game = Game.find(params[:game_id])
     @rent.user = current_user
+    @rent.total_days = (@rent.return_date - Date.today).to_i
+    @rent.total_price = @rent.total_days * @rent.game.price
+    @rent.game.update(available: false)
     @rent.save
     redirect_to @rent
   end
 
   def update
     @rent = Rent.find(params[:id])
+    @rent.total_days = (@rent.return_date - Date.today).to_i
+    @rent.total_price = @rent.total_days * @rent.game.price
     @rent.update(rent_params)
     redirect_to @rent
   end
@@ -28,6 +33,7 @@ class RentsController < ApplicationController
 
   def destroy
     @rent = Rent.find(params[:id])
+    @rent.game.update(available: true)
     @rent.destroy
     redirect_to game_path
   end
