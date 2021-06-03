@@ -26,7 +26,6 @@
 // }
 
 .banner_show {
-  background-image: url('https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80');
   background-size: cover;
   background-position: center;
   padding: 150px 0;
@@ -40,6 +39,8 @@
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-.price{
-  
+.show_games {
+  width: 800px;
+  text-align: center;
+  margin-left: 150px;
 }
