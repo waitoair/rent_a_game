@@ -16,8 +16,14 @@ class GamesController < ApplicationController
 
   def create
     @game = Game.new(game_params)
+    @game.user = current_user
     @game.save
-    redirect_to game_path(@game)
+    if @game.save
+      redirect_to game_path(@game)
+      flash[:notice] = "Jogo criado"
+    else
+      render :new
+    end
   end
 
   def edit
@@ -41,6 +47,6 @@ class GamesController < ApplicationController
   private
 
   def game_params
-    params.require(:game).permit(:name, :description, :price, :photo, :video)
+    params.require(:game).permit(:name, :description, :category, :price, :photo, :video)
   end
 end
