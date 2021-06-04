@@ -1,7 +1,6 @@
 .navbar-lewagon {
   justify-content: space-around;
   background: #FAFFFD;
-  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .navbar-lewagon p{
@@ -10,37 +9,10 @@
   font-size: 24px;
   }
 
-// .form-inline .form-control {
-//   width: 500px;
-// }
-
 .navbar-button-home {
   text-decoration: none;
   color: #f37258;
 }
-// .avatar {
-//   width: 40px;
-//   border-radius: 50%;
-// }
-
-.avatar-large {
-  width: 56px;
-  border-radius: 50%;
-}
-
-// .avatar-bordered {
-//   width: 40px;
-//   border-radius: 50%;
-//   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-//   border: white 1px solid;
-// }
-
-// .avatar-square {
-//   width: 40px;
-//   border-radius: 0px;
-//   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-//   border: white 1px solid;
-// }
 
 .btn {
   color:#f37258;
@@ -58,8 +30,36 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.btn-different {
+  color: white;
+  background-color:#925481;
+  border: 1px solid;
+  border-radius: 2px;
+  font-family: 'Roboto', sans-serif;
+  margin:5px;
+  padding: 10px;
+}
+
+ .btn-different:hover{
+   color:#925481;
+   background-color: white;
+}
+
 .navbar p{
   color:#f37258;
   text-align: center;
 
+}
+
+.return-to-home{
+  font-family: 'Bebas Neue', cursive;
+  color:#f37258;
+  font-size: 25px;
+}
+
+.return-to-home:hover{
+  font-family: 'Bebas Neue', cursive;
+  color:#f37258;
+  font-size: 25px;
+  text-decoration: none;
 }
