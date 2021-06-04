@@ -5,12 +5,8 @@
   justify-content: space-around;
   }
 
-  .game-info {
-    width: 130px;
-  }
-
  .games .photo-game{
-  margin: 20px;
+  margin: 10px;
   background-size: cover;
   background-position: center;
   height: 180px;
@@ -20,16 +16,14 @@
   align-items: center;
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
- }
+}
 
 .games a:hover{
   color:#f37258;
-  border: 1px solid #f37258;
   border-radius: 5px;
   background-color: #f37258;
-  margin-bottom: 5px;
 }
 
 .decoration{
-   text-decoration:none; 
+  text-decoration:none; 
 }
