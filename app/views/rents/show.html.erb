@@ -1,9 +1,9 @@
 <div class="container rent-form">
-<h1> Rent: <%= @rent.game.name %> </h1>
-<p> With world: <%= @rent.rent_world ? 'Yes' : 'No' %> </p>
-<p> With game: <%= @rent.rent_game ? 'Yes' : 'No' %> </p>
-<p>Return date: <%= @rent.return_date.strftime("%d/%m/%Y") %> </p>
-<p>Total price: <%= @rent.total_price %> - (<%= pluralize(@rent.total_days, 'day') %> ) </p>
-<%= link_to  "Back to Homepage", root_path, class:"btn" %>
-<%= link_to  "Edit", edit_rent_path(@rent), class:"btn" %>
+  <h1> Rent: <%= @rent.game.name %> </h1>
+  <p> With world: <%= @rent.rent_world ? 'Yes' : 'No' %> </p>
+  <p> With game: <%= @rent.rent_game ? 'Yes' : 'No' %> </p>
+  <p>Return date: <%= @rent.return_date.strftime("%d/%m/%Y") %> </p>
+  <p>Total price: $ <%= @rent.total_price %> - ( <%= pluralize(@rent.total_days, 'day') %> ) </p>
+  <%= link_to  "Back to Homepage", root_path, class:"btn" %>
+  <%= link_to  "Edit", edit_rent_path(@rent), class:"btn" %>
 </div>
