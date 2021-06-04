@@ -1,53 +1,65 @@
 .navbar-lewagon {
-  justify-content: space-between;
-  background: rgb(68, 68, 68);
+  justify-content: space-around;
+  background: #FAFFFD;
   font-family: 'Noto Sans JP', sans-serif;
 }
-
-// .navbar-lewagon .navbar-collapse {
-//   flex-grow: 0;
-// }
-
-// .navbar-lewagon .navbar-brand img {
-//   width: 40px;
-// }
 
 .navbar-lewagon p{
-  font-family: 'Noto Sans JP', sans-serif;
-  color: rgb(255, 255, 255);
-  opacity: 0.8;
-  margin-top: 5px;
+  font-family: 'Bebas Neue', cursive;
+  margin: 0;
+  font-size: 24px;
   }
 
-.form-inline .form-control {
-  width: 500px;
-}
+// .form-inline .form-control {
+//   width: 500px;
+// }
 
 .navbar-button-home {
   text-decoration: none;
-  color: rgb(45, 214, 135);
+  color: #f37258;
 }
-.avatar {
-  width: 40px;
-  border-radius: 50%;
-}
+// .avatar {
+//   width: 40px;
+//   border-radius: 50%;
+// }
 
 .avatar-large {
   width: 56px;
   border-radius: 50%;
 }
 
-.avatar-bordered {
-  width: 40px;
-  border-radius: 50%;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  border: white 1px solid;
+// .avatar-bordered {
+//   width: 40px;
+//   border-radius: 50%;
+//   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+//   border: white 1px solid;
+// }
+
+// .avatar-square {
+//   width: 40px;
+//   border-radius: 0px;
+//   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+//   border: white 1px solid;
+// }
+
+.btn {
+  color:#f37258;
+  border: 1px solid ;
+  border-radius: 2px;
+  font-family: 'Roboto', sans-serif;
+  margin:5px;
+  
 }
 
-.avatar-square {
-  width: 40px;
-  border-radius: 0px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  border: white 1px solid;
+.btn:hover{
+  color:#FAFFFD;
+  background-color: #f37258 ;
+  border-radius: 2px;
+  font-family: 'Roboto', sans-serif;
 }
 
+.navbar p{
+  color:#f37258;
+  text-align: center;
+
+}

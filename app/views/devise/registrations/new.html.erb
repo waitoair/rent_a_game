@@ -1,4 +1,4 @@
-<h2>Sign up</h2>
+<h2 style="font-family: 'Bebas Neue', cursive;">Sign up</h2>
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :post, class:"row g-3" }) do |f| %>
     <%= f.error_notification %>
@@ -34,7 +34,7 @@
     </div>
 
     <div class="col-12">
-      <%= f.button :submit, "Sign up", class:"btn btn-outline-success w-100" %>
+      <%= f.button :submit, "Sign up", class:"btn w-100" %>
     </div>
   <% end %>
 
