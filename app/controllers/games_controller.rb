@@ -20,7 +20,6 @@ class GamesController < ApplicationController
     @game.save
     if @game.save
       redirect_to game_path(@game)
-      flash[:notice] = "Jogo criado"
     else
       render :new
     end
