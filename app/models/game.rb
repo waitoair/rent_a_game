@@ -9,4 +9,6 @@ class Game < ApplicationRecord
   validates :description, presence: true, length: { minimum: 10 }
   validates :price, presence: true, numericality: { greater_than_or_equal_to: 0 }
   validates :category, presence: true
+  validates :video, presence: true
+  validates :photo, presence: true
 end

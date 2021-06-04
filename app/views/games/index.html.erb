@@ -20,11 +20,9 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-<%# </div> %>
 
-<%# <h1>All Games</h1> %>
 <div class="container">
-  <div class="games">
+  <div class="games d-flex flex-wrap">
     <% @games.each do |game| %>
       <a href="<%=game_path(game)%>">
         <div class="photo-game game-info" style="background-image: url('<%= cl_image_path game.photo.key, height: 300, crop: :fill if game.photo.attached? %>')">
@@ -33,4 +31,3 @@
     <% end %>
   </div>
 </div>
-
