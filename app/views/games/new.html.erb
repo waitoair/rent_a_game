@@ -4,9 +4,8 @@
   <%= f.input :name %>
   <%= f.input :description %>
   <%= f.input :category %>
-  <%= f.input :price %>
-  <p>This Game has a World? If Yes, check: </p>
-  <%= f.check_box :world %>
+  <%= f.input :price, input_html: { min: '5.0' } %>
+  <p> Does this game have a world? If yes, check:  <%= f.check_box :world %> </p>
   <%= f.input :photo, as: :file %>
   <%= f.input :video, as: :file %>
   <%= f.submit class:"btn" %>
