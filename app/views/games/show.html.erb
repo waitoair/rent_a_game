@@ -7,15 +7,19 @@
     <h1><%= @game.name %></h1>
     <h2><%= @game.category %></h2>
     <p><%= @game.description %></p>
-    <p class="price">Price: <%= @game.price %></p>
-    <p> <%= @game.available ? "available" : "unavailable until #{@game.rents.order(:return_date).last.return_date.strftime("%d-%m-%Y")}"  %></p>
-  </div>
+    <p style="font-weight: bold; font-size:15px; text-decoration: underline;">Price: <%= @game.price %></p>
+    <% if @game.available == true %>
+      <p style="color:green; font-size:20px; font-weight: bold;">Available</p>
+    <% else %> 
+     <p style="color:red; font-size:20px; font-weight: bold;"> Unavailable until <%= "#{@game.rents.order(:return_date).last.return_date.strftime("%d-%m-%Y")}" %> </p>
+    <% end %> 
+    </div>
 </div>
 
 <div class="show_button">
-  <%= link_to  "Back to Homepage", root_path, class:"btn btn-outline-success" %>
+  <%= link_to  "Back to Homepage", root_path, class:"btn" %>
   <% if current_user == @game.user %>
-    <%= link_to "Edit Game", edit_game_path(@game), class:"btn btn-outline-success" %>
+    <%= link_to "Edit Game", edit_game_path(@game), class:"btn" %>
   <% end %>
-  <%= link_to "Rent a Game", new_game_rent_path(@game), class:"btn btn-outline-success" if @game.available %>
+  <%= link_to "Rent a Game", new_game_rent_path(@game), class:"btn" if @game.available %>
 </div>

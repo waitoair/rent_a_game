@@ -3,18 +3,20 @@
 
     <p>Only Old Games</p>
 
-  <form class="form-inline">
+  <%# <form class="form-inline"> %>
     <%# <input class="form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search"> %>
     <%# <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-gamepad"></i></button> %>
-  </form>
-  <% if current_user %>
-  <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
-  <%= link_to "Log Out", destroy_user_session_path, method: 'delete', class:"btn"
- %>
-  <%= link_to "Edit User", edit_user_registration_path, class:"btn" %>
-  <% else %>
-  <%= link_to "Login", new_user_session_path, class:"btn" %>
-  <%= link_to "Sign Up", new_user_registration_path, class:"btn" %>
-  <% end %>
+  <%# </form> %>
+    <div>
+      <% if current_user %>
+      <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
+      <%= link_to "Edit User", edit_user_registration_path, class:"btn" %>
+      <%= link_to "Log Out", destroy_user_session_path, method: 'delete', class:"btn"
+    %>
+      <% else %>
+      <%= link_to "Login", new_user_session_path, class:"btn" %>
+      <%= link_to "Sign Up", new_user_registration_path, class:"btn" %>
+      <% end %>
+    </div>
   </div>
 </div>

@@ -1,8 +1,26 @@
 .rent-text {
   color:rgb(72, 78, 80);
+  font-family: 'Bebas Neue', cursive;
 }
 
 .space {
   display: flex;
   justify-content: center;
+}
+.rent-form h1{
+  font-family: 'Bebas Neue', cursive;
+}
+.rent-form p{
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+.btn-user {
+  color:#f37258;
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+.check-rent{
+  margin:15px;
 }

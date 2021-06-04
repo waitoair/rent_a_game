@@ -1,13 +1,13 @@
 .navbar-lewagon {
-  justify-content: space-between;
+  justify-content: space-around;
   background: #FAFFFD;
   font-family: 'Noto Sans JP', sans-serif;
 }
 
 .navbar-lewagon p{
   font-family: 'Bebas Neue', cursive;
-  opacity: 0.8;
-  margin-top: 5px;
+  margin: 0;
+  font-size: 24px;
   }
 
 // .form-inline .form-control {
@@ -18,35 +18,36 @@
   text-decoration: none;
   color: #f37258;
 }
-.avatar {
-  width: 40px;
-  border-radius: 50%;
-}
+// .avatar {
+//   width: 40px;
+//   border-radius: 50%;
+// }
 
 .avatar-large {
   width: 56px;
   border-radius: 50%;
 }
 
-.avatar-bordered {
-  width: 40px;
-  border-radius: 50%;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  border: white 1px solid;
-}
+// .avatar-bordered {
+//   width: 40px;
+//   border-radius: 50%;
+//   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+//   border: white 1px solid;
+// }
 
-.avatar-square {
-  width: 40px;
-  border-radius: 0px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  border: white 1px solid;
-}
+// .avatar-square {
+//   width: 40px;
+//   border-radius: 0px;
+//   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+//   border: white 1px solid;
+// }
 
 .btn {
   color:#f37258;
   border: 1px solid ;
   border-radius: 2px;
   font-family: 'Roboto', sans-serif;
+  margin:5px;
   
 }
 

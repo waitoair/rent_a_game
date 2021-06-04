@@ -1,11 +1,11 @@
-<div class="container">
-  <h1>Rent View</h1>
+<div class="container text-form">
+  <h1 style="font-family: 'Bebas Neue', cursive;">Rent View</h1>
   <%= form_with(model:[@game, @rent]) do |f| %>
-    <%= f.check_box :rent_world %>
-    <%= f.label :rent_world %>
+    <%= f.check_box :rent_world%>
+    <%= f.label :rent_world%>
     <%= f.check_box :rent_game %>
     <%= f.label :rent_game %>
-    <%= f.date_field :return_date, min:Date.today, max:Date.today + 5 %>
-    <%= f.submit "Submit Rent", class:"btn btn-outline-success" %>
+    <%= f.date_field :return_date, min:Date.today, max:Date.today + 5, class:"check-rent" %>
+    <%= f.submit "Submit", class:"btn" %>
   <% end %>
 </div>
